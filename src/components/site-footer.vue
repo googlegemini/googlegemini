@@ -12,18 +12,16 @@
 					target="_blank"
 					rel="noopener"
 					class="text-g-blue font-medium hover:underline"
-					>Google LLC</a
+					>Google</a
 				>
-			</p>
-			<p>
 				or
 				<a
 					href="https://www.microsoft.com/"
 					target="_blank"
 					rel="noopener"
 					class="text-g-blue font-medium hover:underline"
-					>Microsoft Corporation</a
-				>
+					>Microsoft</a
+				>.
 			</p>
 			<p>
 				<a
@@ -33,9 +31,7 @@
 					class="text-g-blue font-medium hover:underline"
 					>Gemini</a
 				>
-				is a trademark of Google.
-			</p>
-			<p>
+				and
 				<a
 					href="https://github.com"
 					target="_blank"
@@ -43,20 +39,16 @@
 					class="text-g-blue font-medium hover:underline"
 					>GitHub</a
 				>
-				is a trademark of Microsoft.
+				are trademarks.
 			</p>
 			<p>
-				A community joke, released under
 				<a
 					href="https://creativecommons.org/publicdomain/zero/1.0/"
 					target="_blank"
 					rel="noopener"
 					class="text-g-blue font-medium hover:underline"
 					>CC0 1.0</a
-				>.
-			</p>
-			<p>
-				Built by
+				>. Built by
 				<a
 					href="https://github.com/canmi21"
 					target="_blank"

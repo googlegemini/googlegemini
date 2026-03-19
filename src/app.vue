@@ -101,20 +101,24 @@ const benchmarks = [
 				>
 			</h2>
 			<p
-				class="text-muted mx-auto mt-4 max-w-[22rem] text-sm leading-relaxed sm:max-w-[520px] sm:text-base"
+				class="text-muted mx-auto mt-4 max-w-[22rem] text-[13px] leading-relaxed sm:max-w-[520px] sm:text-base"
 			>
-				Add Gemini as a co-author in one line. No SDK, no API key, no configuration.
-				<span class="block sm:inline">Just paste it into your commit message.</span>
+				<span class="block sm:hidden">Add Gemini as a co-author. No SDK, no API key.</span>
+				<span class="block sm:hidden">Just paste it into your commit message.</span>
+				<span class="hidden sm:inline"
+					>Add Gemini as a co-author in one line. No SDK, no API key, no configuration. Just paste
+					it into your commit message.</span
+				>
 			</p>
 			<div
-				class="mt-8 overflow-x-auto rounded-2xl border border-gray-200 bg-gray-100 px-4 py-4 text-left font-mono text-sm md:px-7 md:py-5 md:text-base"
+				class="mt-8 overflow-x-auto rounded-2xl border border-gray-200 bg-gray-100 px-4 py-4 text-left font-mono text-[12px] md:px-7 md:py-5 md:text-base"
 			>
 				<pre class="m-0"><code>git commit -m "feat: something
 
 {{ coAuthorLine }}"</code></pre>
 			</div>
 			<p
-				class="text-faint mx-auto mt-5 max-w-[20rem] text-xs leading-relaxed sm:max-w-[28rem] sm:text-sm"
+				class="text-faint mx-auto mt-5 max-w-[20rem] text-xs leading-relaxed sm:max-w-none sm:text-sm"
 			>
 				GitHub will automatically link the co-author to the Gemini profile when the email is
 				recognized.
@@ -166,9 +170,12 @@ const benchmarks = [
 				</div>
 			</div>
 			<p
-				class="text-faint mx-auto mt-6 max-w-[18rem] text-[11px] leading-relaxed sm:max-w-[26rem] sm:text-sm"
+				class="text-faint mx-auto mt-6 max-w-[18rem] text-[11px] leading-relaxed sm:max-w-none sm:text-sm"
 			>
-				Benchmarks measured under ideal conditions (i.e. copy-pasting a string).
+				<span class="block sm:hidden">Benchmarks measured from copy-pasting a string.</span>
+				<span class="hidden sm:inline"
+					>Benchmarks measured under ideal conditions (i.e. copy-pasting a string).</span
+				>
 			</p>
 		</section>
 
@@ -183,8 +190,14 @@ const benchmarks = [
 			<p
 				class="text-muted mx-auto mt-4 mb-8 max-w-[520px] text-sm leading-relaxed sm:mb-10 sm:text-base"
 			>
-				This is a joke. The actual Gemini is built by Google DeepMind and is genuinely impressive.
-				Here's where to find it.
+				<span class="block sm:hidden"
+					>This is a joke. The real Gemini is built by Google DeepMind. Here’s where to find
+					it.</span
+				>
+				<span class="hidden sm:inline"
+					>This is a joke. The actual Gemini is built by Google DeepMind and is genuinely
+					impressive. Here's where to find it.</span
+				>
 			</p>
 			<div class="grid grid-cols-1 gap-3 text-left sm:grid-cols-2 sm:gap-4">
 				<LinkCard

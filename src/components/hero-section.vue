@@ -70,13 +70,11 @@ async function copy(line: string) {
 
 		<button
 			type="button"
-			class="group hover:border-g-blue mt-8 flex w-full cursor-pointer flex-col items-start gap-3 rounded-2xl border border-gray-200 bg-gray-100 px-4 py-4 text-left font-mono text-sm transition-colors sm:mt-10 sm:px-5 sm:py-5 md:px-7 md:text-base"
+			class="group hover:border-g-blue mt-8 flex w-full cursor-pointer flex-col items-start gap-3 rounded-2xl border border-gray-200 bg-gray-100 px-4 py-4 text-left font-mono text-[11px] transition-colors sm:mt-10 sm:px-5 sm:py-5 sm:text-sm md:px-7 md:text-base"
 			@click="copy(coAuthorLine)"
 		>
-			<code class="text-text w-full min-w-0 leading-relaxed break-words">
-				<span class="block sm:hidden">{{ coAuthorPrefix }}</span>
-				<span class="block sm:hidden">{{ coAuthorIdentity }}</span>
-				<span class="hidden sm:inline">{{ coAuthorLine }}</span>
+			<code class="text-text w-full overflow-x-auto leading-relaxed whitespace-nowrap">
+				{{ coAuthorLine }}
 			</code>
 			<span
 				class="font-sans text-xs font-medium transition-colors sm:self-end"
