@@ -28,3 +28,19 @@ a {
 	color: inherit;
 	text-decoration: none;
 }
+
+.text-g-blue {
+	color: var(--color-g-blue);
+}
+
+.text-g-red {
+	color: var(--color-g-red);
+}
+
+.text-g-yellow {
+	color: var(--color-g-yellow);
+}
+
+.text-g-green {
+	color: var(--color-g-green);
+}
