@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "vite",
     "gen:og": "node scripts/gen-og.mjs",
-    "build": "vue-tsc && vite build",
+    "build": "vue-tsc && vite build && vite build --ssr src/render.ts --outDir dist-server && node scripts/prerender.mjs",
     "preview": "vite preview",
     "fmt": "oxfmt --write .",
     "lint": "oxlint && eslint .",

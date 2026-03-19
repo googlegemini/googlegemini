@@ -50,7 +50,7 @@ const benchmarks = [
 		aria-hidden="true"
 	/>
 
-	<main class="mx-auto max-w-[680px] px-4 sm:px-5 md:px-6">
+	<main class="mx-auto max-w-170 px-4 sm:px-5 md:px-6">
 		<HeroSection
 			:co-author-prefix="coAuthorPrefix"
 			:co-author-identity="coAuthorIdentity"
@@ -66,7 +66,7 @@ const benchmarks = [
 				>
 			</h2>
 			<p
-				class="text-muted mx-auto mt-4 max-w-88 text-[13px] leading-relaxed sm:max-w-[520px] sm:text-base"
+				class="text-muted mx-auto mt-4 max-w-88 text-[13px] leading-relaxed sm:max-w-130 sm:text-base"
 			>
 				<span class="block sm:hidden">Add Gemini as a co-author. No SDK, no API key.</span>
 				<span class="block sm:hidden">Just paste it into your commit message.</span>
@@ -149,7 +149,7 @@ const benchmarks = [
 				>
 				Gemini?
 			</h2>
-			<p class="text-muted mx-auto mt-4 mb-8 max-w-[520px] text-sm/relaxed sm:mb-10 sm:text-base">
+			<p class="text-muted mx-auto mt-4 mb-8 max-w-130 text-sm/relaxed sm:mb-10 sm:text-base">
 				<span class="block sm:hidden"
 					>This is a joke. The real Gemini is built by Google DeepMind. Here’s where to find
 					it.</span
