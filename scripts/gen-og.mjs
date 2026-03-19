@@ -28,12 +28,37 @@ const fontCandidates = {
 		'/System/Library/Fonts/Supplemental/Arial.ttf',
 		'/System/Library/Fonts/Helvetica.ttc',
 		'/System/Library/Fonts/SFNS.ttf',
+		'/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf',
+		'/usr/share/fonts/TTF/DejaVuSans.ttf',
 	],
 	bold: [
 		'/System/Library/Fonts/Supplemental/Arial Bold.ttf',
 		'/System/Library/Fonts/HelveticaNeue.ttc',
 		'/System/Library/Fonts/SFNS.ttf',
+		'/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf',
+		'/usr/share/fonts/TTF/DejaVuSans-Bold.ttf',
 	],
+}
+
+const GOOGLE_FONTS_CSS = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap'
+
+async function fetchGoogleFont(weight) {
+	const res = await fetch(GOOGLE_FONTS_CSS, {
+		headers: {
+			'User-Agent':
+				'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+		},
+	})
+	const css = await res.text()
+	const weightStr = weight === 700 ? '700' : '400'
+	const regex = new RegExp(
+		`@font-face\\s*\\{[^}]*font-weight:\\s*${weightStr}[^}]*src:\\s*url\\(([^)]+)\\)[^}]*unicode-range:\\s*U\\+0000-00FF`,
+		's',
+	)
+	const match = css.match(regex)
+	if (!match) throw new Error(`Could not find Google Font for weight ${weightStr}`)
+	const fontRes = await fetch(match[1])
+	return Buffer.from(await fontRes.arrayBuffer())
 }
 
 async function resolveFontPath(candidates) {
@@ -45,8 +70,7 @@ async function resolveFontPath(candidates) {
 			continue
 		}
 	}
-
-	throw new Error(`Unable to find a readable font. Checked: ${candidates.join(', ')}`)
+	return null
 }
 
 function decodeHtmlEntities(value) {
@@ -74,10 +98,16 @@ async function main() {
 	}).render()
 	const regularFontPath = await resolveFontPath(fontCandidates.regular)
 	const boldFontPath = await resolveFontPath(fontCandidates.bold)
-	const [regularFont, boldFont] = await Promise.all([
-		readFile(regularFontPath),
-		readFile(boldFontPath),
-	])
+	let regularFont, boldFont
+	if (regularFontPath && boldFontPath) {
+		;[regularFont, boldFont] = await Promise.all([
+			readFile(regularFontPath),
+			readFile(boldFontPath),
+		])
+	} else {
+		console.info('Local fonts not found, downloading from Google Fonts...')
+		;[regularFont, boldFont] = await Promise.all([fetchGoogleFont(400), fetchGoogleFont(700)])
+	}
 	const { descriptor } = parse(source, { filename: templatePath })
 
 	if (!descriptor.template) {
@@ -117,8 +147,8 @@ async function main() {
 		width: 1200,
 		height: 630,
 		fonts: [
-			{ name: 'Arial', data: regularFont, weight: 400, style: 'normal' },
-			{ name: 'Arial', data: boldFont, weight: 700, style: 'normal' },
+			{ name: 'Inter', data: regularFont, weight: 400, style: 'normal' },
+			{ name: 'Inter', data: boldFont, weight: 700, style: 'normal' },
 		],
 	})
 
