@@ -1,9 +1,9 @@
 <template>
-	<footer class="text-faint px-4 pt-2 pb-8 text-center text-xs leading-relaxed sm:px-5 md:px-6">
+	<footer class="text-faint px-4 pt-2 pb-8 text-center text-xs/relaxed sm:px-5 md:px-6">
 		<div
 			class="from-g-blue via-g-red via-g-yellow to-g-green mb-8 h-0.5 bg-linear-to-r from-25% via-50% opacity-40"
 			aria-hidden="true"
-		></div>
+		/>
 		<div class="space-y-1 sm:hidden">
 			<p>
 				Not affiliated with

@@ -60,7 +60,7 @@ async function copy(line: string) {
 	>
 		<h1 class="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
 			Commit with
-			<span class="bg-linear-to-r from-[#4a82f6] to-[#629bf8] bg-clip-text text-transparent"
+			<span class="to-g-blue-light bg-linear-to-r from-[#4a82f6] bg-clip-text text-transparent"
 				>Gemini</span
 			>
 		</h1>
@@ -70,7 +70,7 @@ async function copy(line: string) {
 
 		<button
 			type="button"
-			class="group hover:border-g-blue mt-8 flex w-full cursor-pointer flex-col items-start gap-3 rounded-2xl border border-gray-200 bg-gray-100 px-4 py-4 text-left font-mono text-[11px] transition-colors sm:mt-10 sm:px-5 sm:py-5 sm:text-sm md:px-7 md:text-base dark:border-gray-700 dark:bg-white/5"
+			class="group hover:border-g-blue mt-8 flex w-full cursor-pointer flex-col items-start gap-3 rounded-2xl border border-gray-200 bg-gray-100 p-4 text-left font-mono text-[11px] transition-colors sm:mt-10 sm:p-5 sm:text-sm md:px-7 md:text-base dark:border-gray-700 dark:bg-white/5"
 			@click="copy(coAuthorLine)"
 		>
 			<code class="text-text w-full overflow-x-auto leading-relaxed whitespace-nowrap">
@@ -78,7 +78,7 @@ async function copy(line: string) {
 			</code>
 			<span
 				class="font-sans text-xs font-medium transition-colors sm:self-end"
-				:class="copied ? 'text-g-green' : copyFailed ? 'text-g-red' : 'text-g-blue'"
+				:class="copied ? 'text-g-green' : copyFailed ? 'text-g-red' : `text-g-blue`"
 			>
 				<template v-if="copied">Copied!</template>
 				<template v-else-if="copyFailed">Press and hold to copy</template>

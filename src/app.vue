@@ -48,7 +48,7 @@ const benchmarks = [
 	<div
 		class="from-g-blue via-g-red via-g-yellow to-g-green h-1 bg-linear-to-r from-25% via-50%"
 		aria-hidden="true"
-	></div>
+	/>
 
 	<main class="mx-auto max-w-[680px] px-4 sm:px-5 md:px-6">
 		<HeroSection
@@ -61,12 +61,12 @@ const benchmarks = [
 		<section class="py-12 text-center md:py-24">
 			<h2 class="text-xl font-semibold md:text-2xl">
 				Seamless
-				<span class="bg-linear-to-r from-[#4a82f6] to-[#629bf8] bg-clip-text text-transparent"
+				<span class="to-g-blue-light bg-linear-to-r from-[#4a82f6] bg-clip-text text-transparent"
 					>Integration</span
 				>
 			</h2>
 			<p
-				class="text-muted mx-auto mt-4 max-w-[22rem] text-[13px] leading-relaxed sm:max-w-[520px] sm:text-base"
+				class="text-muted mx-auto mt-4 max-w-88 text-[13px] leading-relaxed sm:max-w-[520px] sm:text-base"
 			>
 				<span class="block sm:hidden">Add Gemini as a co-author. No SDK, no API key.</span>
 				<span class="block sm:hidden">Just paste it into your commit message.</span>
@@ -76,15 +76,13 @@ const benchmarks = [
 				>
 			</p>
 			<div
-				class="mt-8 overflow-x-auto rounded-2xl border border-gray-200 bg-gray-100 px-4 py-4 text-left font-mono text-[12px] md:px-7 md:py-5 md:text-base dark:border-gray-700 dark:bg-white/5"
+				class="mt-8 overflow-x-auto rounded-2xl border border-gray-200 bg-gray-100 p-4 text-left font-mono text-[12px] md:px-7 md:py-5 md:text-base dark:border-gray-700 dark:bg-white/5"
 			>
 				<pre class="m-0"><code>git commit -m "feat: something
 
-{{ coAuthorLine }}"</code></pre>
+        {{ coAuthorLine }}"</code></pre>
 			</div>
-			<p
-				class="text-faint mx-auto mt-5 max-w-[20rem] text-xs leading-relaxed sm:max-w-none sm:text-sm"
-			>
+			<p class="text-faint mx-auto mt-5 max-w-[20rem] text-xs/relaxed sm:max-w-none sm:text-sm">
 				GitHub will automatically link the co-author to the Gemini profile when the email is
 				recognized.
 			</p>
@@ -106,18 +104,16 @@ const benchmarks = [
 			<h2 class="text-xl font-semibold md:text-2xl">
 				Why This <span class="text-g-red">Exists</span>
 			</h2>
-			<div class="mx-auto mt-4 max-w-[21rem] space-y-3 sm:max-w-[30rem]">
+			<div class="mx-auto mt-4 max-w-84 space-y-3 sm:max-w-120">
 				<div>
-					<code class="rounded bg-gray-100 px-1.5 py-0.5 font-mono text-sm dark:bg-white/10"
+					<code class="rounded-sm bg-gray-100 px-1.5 py-0.5 font-mono text-sm dark:bg-white/10"
 						>Co-Authored-By: Claude</code
 					>
 				</div>
-				<p class="text-muted text-sm leading-relaxed sm:text-base">
+				<p class="text-muted text-sm/relaxed sm:text-base">
 					became a familiar sight in commit histories.
 				</p>
-				<p class="text-muted text-sm leading-relaxed sm:text-base">
-					Gemini did not have one. Now it does.
-				</p>
+				<p class="text-muted text-sm/relaxed sm:text-base">Gemini did not have one. Now it does.</p>
 			</div>
 		</section>
 
@@ -129,8 +125,10 @@ const benchmarks = [
 						class="text-3xl font-bold sm:text-4xl"
 						:class="benchmark.valueClass"
 						v-html="benchmark.value"
-					></div>
-					<div class="text-faint mt-2 text-xs sm:text-sm">{{ benchmark.label }}</div>
+					/>
+					<div class="text-faint mt-2 text-xs sm:text-sm">
+						{{ benchmark.label }}
+					</div>
 				</div>
 			</div>
 			<p
@@ -146,14 +144,12 @@ const benchmarks = [
 		<section class="py-12 text-center md:py-24">
 			<h2 class="text-xl font-semibold md:text-2xl">
 				Looking for the
-				<span class="bg-linear-to-r from-[#4a82f6] to-[#629bf8] bg-clip-text text-transparent"
+				<span class="to-g-blue-light bg-linear-to-r from-[#4a82f6] bg-clip-text text-transparent"
 					>real</span
 				>
 				Gemini?
 			</h2>
-			<p
-				class="text-muted mx-auto mt-4 mb-8 max-w-[520px] text-sm leading-relaxed sm:mb-10 sm:text-base"
-			>
+			<p class="text-muted mx-auto mt-4 mb-8 max-w-[520px] text-sm/relaxed sm:mb-10 sm:text-base">
 				<span class="block sm:hidden"
 					>This is a joke. The real Gemini is built by Google DeepMind. Here’s where to find
 					it.</span
@@ -173,7 +169,7 @@ const benchmarks = [
 					icon-text-class="text-white"
 				>
 					<template #icon>
-						<svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5">
+						<svg viewBox="0 0 24 24" fill="currentColor" class="size-5">
 							<path
 								d="M11.04 19.32Q12 21.51 12 24q0-2.49.93-4.68.96-2.19 2.58-3.81t3.81-2.55Q21.51 12 24 12q-2.49 0-4.68-.93a12.3 12.3 0 0 1-3.81-2.58 12.3 12.3 0 0 1-2.58-3.81Q12 2.49 12 0q0 2.49-.96 4.68-.93 2.19-2.55 3.81a12.3 12.3 0 0 1-3.81 2.58Q2.49 12 0 12q2.49 0 4.68.96 2.19.93 3.81 2.55t2.55 3.81"
 							/>
@@ -189,7 +185,7 @@ const benchmarks = [
 					icon-text-class="text-white"
 				>
 					<template #icon>
-						<svg viewBox="0 0 24 24" fill="currentColor" fill-rule="evenodd" class="h-5 w-5">
+						<svg viewBox="0 0 24 24" fill="currentColor" fill-rule="evenodd" class="size-5">
 							<path
 								d="M9.921 4.196H6.328A2.705 2.705 0 003.623 6.9v11.362a2.705 2.705 0 002.705 2.705h11.363a2.705 2.705 0 002.705-2.705v-4.756l1.623-1.113v5.87a4.329 4.329 0 01-4.328 4.328H6.328A4.329 4.329 0 012 18.263V6.901a4.328 4.328 0 014.328-4.329h4.545l-.952 1.624z"
 							/>
@@ -208,7 +204,7 @@ const benchmarks = [
 					icon-text-class="text-white"
 				>
 					<template #icon>
-						<svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5">
+						<svg viewBox="0 0 24 24" fill="currentColor" class="size-5">
 							<path
 								d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"
 							/>
@@ -224,7 +220,7 @@ const benchmarks = [
 					icon-text-class="text-white"
 				>
 					<template #icon>
-						<svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5">
+						<svg viewBox="0 0 24 24" fill="currentColor" class="size-5">
 							<path
 								d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
 							/>

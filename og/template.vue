@@ -22,7 +22,7 @@
 				display: flex;
 				background: radial-gradient(circle, rgba(66, 133, 244, 0.35) 0%, transparent 70%);
 			"
-		></div>
+		/>
 		<!-- 4-color gradient glow: red (top-right) -->
 		<div
 			style="
@@ -34,7 +34,7 @@
 				display: flex;
 				background: radial-gradient(circle, rgba(234, 67, 53, 0.25) 0%, transparent 70%);
 			"
-		></div>
+		/>
 		<!-- 4-color gradient glow: yellow (bottom-right) -->
 		<div
 			style="
@@ -46,7 +46,7 @@
 				display: flex;
 				background: radial-gradient(circle, rgba(251, 188, 5, 0.28) 0%, transparent 70%);
 			"
-		></div>
+		/>
 		<!-- 4-color gradient glow: green (bottom-left) -->
 		<div
 			style="
@@ -58,14 +58,14 @@
 				display: flex;
 				background: radial-gradient(circle, rgba(52, 168, 83, 0.25) 0%, transparent 70%);
 			"
-		></div>
+		/>
 
 		<!-- Top 4-color stripe -->
 		<div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; display: flex">
-			<div style="display: flex; width: 25%; height: 100%; background: #4285f4"></div>
-			<div style="display: flex; width: 25%; height: 100%; background: #ea4335"></div>
-			<div style="display: flex; width: 25%; height: 100%; background: #fbbc05"></div>
-			<div style="display: flex; width: 25%; height: 100%; background: #34a853"></div>
+			<div style="display: flex; width: 25%; height: 100%; background: #4285f4" />
+			<div style="display: flex; width: 25%; height: 100%; background: #ea4335" />
+			<div style="display: flex; width: 25%; height: 100%; background: #fbbc05" />
+			<div style="display: flex; width: 25%; height: 100%; background: #34a853" />
 		</div>
 
 		<!-- Center content -->
