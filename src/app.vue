@@ -90,18 +90,87 @@ function copy() {
 			<p><code>Co-Authored-By: Claude</code> became a familiar sight in commit histories.</p>
 			<p>Gemini did not have one. Now it does.</p>
 		</section>
+
+		<section class="benchmarks">
+			<h2>Benchmarks</h2>
+			<div class="benchmark-grid">
+				<div class="benchmark">
+					<div class="benchmark-value g-blue">0 ms</div>
+					<div class="benchmark-label">Response time</div>
+				</div>
+				<div class="benchmark">
+					<div class="benchmark-value g-red">&infin;</div>
+					<div class="benchmark-label">Context window</div>
+				</div>
+				<div class="benchmark">
+					<div class="benchmark-value g-yellow">$0</div>
+					<div class="benchmark-label">Per token</div>
+				</div>
+				<div class="benchmark">
+					<div class="benchmark-value g-green">100%</div>
+					<div class="benchmark-label">Uptime</div>
+				</div>
+			</div>
+			<p class="note">Benchmarks measured under ideal conditions (i.e. copy-pasting a string).</p>
+		</section>
+
+		<section class="real">
+			<h2>Looking for the <span class="g-blue">real</span> Gemini?</h2>
+			<p class="lead">
+				This is a joke. The actual Gemini is built by Google DeepMind and is
+				genuinely impressive. Here's where to find it.
+			</p>
+			<div class="link-grid">
+				<a href="https://gemini.google.com" target="_blank" rel="noopener" class="link-card">
+					<div class="link-icon blue">G</div>
+					<div class="link-content">
+						<h3>Gemini</h3>
+						<p>Chat with Gemini</p>
+					</div>
+					<span class="link-arrow">&rarr;</span>
+				</a>
+				<a href="https://aistudio.google.com" target="_blank" rel="noopener" class="link-card">
+					<div class="link-icon red">G</div>
+					<div class="link-content">
+						<h3>Google AI Studio</h3>
+						<p>Prototype with the Gemini API</p>
+					</div>
+					<span class="link-arrow">&rarr;</span>
+				</a>
+				<a href="https://ai.google.dev/gemini-api/docs" target="_blank" rel="noopener" class="link-card">
+					<div class="link-icon yellow">G</div>
+					<div class="link-content">
+						<h3>Gemini API Docs</h3>
+						<p>Build with the API</p>
+					</div>
+					<span class="link-arrow">&rarr;</span>
+				</a>
+				<a href="https://github.com/google-gemini" target="_blank" rel="noopener" class="link-card">
+					<div class="link-icon green">G</div>
+					<div class="link-content">
+						<h3>google-gemini</h3>
+						<p>Official GitHub (not this one)</p>
+					</div>
+					<span class="link-arrow">&rarr;</span>
+				</a>
+			</div>
+		</section>
 	</main>
 
 	<footer>
 		<div class="footer-stripe" aria-hidden="true"></div>
 		<p>
-			This project is <strong>not</strong> affiliated with Google LLC, Google DeepMind, or the
-			Gemini product.
+			Not affiliated with
+			<a href="https://about.google/" target="_blank" rel="noopener">Google LLC</a> or
+			<a href="https://www.microsoft.com/" target="_blank" rel="noopener">Microsoft Corporation</a>.
+			<a href="https://gemini.google.com" target="_blank" rel="noopener">Gemini</a> is a trademark of Google.
+			<a href="https://github.com" target="_blank" rel="noopener">GitHub</a> is a trademark of Microsoft.
 		</p>
-		<p>It is a community joke. Nothing more, nothing less.</p>
 		<p>
+			A community joke, released under
+			<a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC0 1.0</a>.
 			Built by
-			<a href="https://github.com/canmi21" target="_blank" rel="noopener">@Canmi</a>
+			<a href="https://github.com/canmi21" target="_blank" rel="noopener">@Canmi</a>.
 		</p>
 	</footer>
 </template>
@@ -328,12 +397,125 @@ h3 {
 	border-radius: 3px;
 }
 
+.benchmark-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 24px;
+	margin-top: 40px;
+}
+
+.benchmark {
+	text-align: center;
+}
+
+.benchmark-value {
+	font-size: 2.4rem;
+	font-weight: 700;
+	line-height: 1;
+	margin-bottom: 8px;
+}
+
+.benchmark-label {
+	font-size: 0.85rem;
+	color: #888;
+}
+
+.g-yellow {
+	color: #fbbc05;
+}
+
+.g-green {
+	color: #34a853;
+}
+
+.link-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 16px;
+	text-align: left;
+}
+
+.link-card {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	padding: 20px;
+	border-radius: 12px;
+	border: 1px solid #eee;
+	transition: border-color 0.15s;
+}
+
+.link-card:hover {
+	border-color: #4285f4;
+}
+
+.link-icon {
+	width: 40px;
+	height: 40px;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 700;
+	font-size: 1.1rem;
+	color: #fff;
+	flex-shrink: 0;
+}
+
+.link-icon.blue {
+	background: #4285f4;
+}
+
+.link-icon.red {
+	background: #ea4335;
+}
+
+.link-icon.yellow {
+	background: #fbbc05;
+	color: #1a1a1a;
+}
+
+.link-icon.green {
+	background: #34a853;
+}
+
+.link-content {
+	flex: 1;
+	min-width: 0;
+}
+
+.link-content h3 {
+	font-size: 0.95rem;
+	font-weight: 600;
+	margin-bottom: 2px;
+}
+
+.link-content p {
+	font-size: 0.8rem;
+	color: #888;
+}
+
+.link-arrow {
+	color: #ccc;
+	font-size: 1.1rem;
+	flex-shrink: 0;
+	transition: color 0.15s;
+}
+
+.link-card:hover .link-arrow {
+	color: #4285f4;
+}
+
+.real .lead {
+	margin-bottom: 40px;
+}
+
 footer {
 	text-align: center;
 	padding: 48px 24px;
 	font-size: 0.8rem;
 	color: #888;
-	line-height: 2.2;
+	line-height: 1.8;
 }
 
 .footer-stripe {

@@ -16,6 +16,6 @@ Add this line to your commit messages. GitHub will link the co-author to this pr
 
 ## Disclaimer
 
-This project is **not** affiliated with Google LLC, or the Google Gemini.
+This project is **not** affiliated with Google LLC, Google DeepMind, or the Gemini product.
 
 It is a community joke, providing a usable co-author identity for Git commits, in the same spirit as similar identities for other AI.
