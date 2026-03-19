@@ -1,9 +1,16 @@
-*,
-*::before,
-*::after {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+@import 'tailwindcss';
+
+@theme {
+	--color-g-blue: #4285f4;
+	--color-g-blue-light: #629bf8;
+	--color-g-red: #ea4335;
+	--color-g-yellow: #fbbc05;
+	--color-g-green: #34a853;
+	--color-bg: #fafafa;
+	--color-text: #1a1a1a;
+	--color-muted: #555;
+	--color-faint: #888;
+	--font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', Menlo, Consolas, monospace;
 }
 
 html {
@@ -11,14 +18,10 @@ html {
 		system-ui,
 		-apple-system,
 		sans-serif;
-	color: #1a1a1a;
-	background: #fafafa;
+	color: var(--color-text);
+	background: var(--color-bg);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-}
-
-body {
-	min-height: 100vh;
 }
 
 a {
