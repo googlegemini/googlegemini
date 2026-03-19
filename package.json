@@ -1,0 +1,23 @@
+{
+  "name": "gemini",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview",
+    "fmt": "oxfmt --write src/",
+    "knip": "knip"
+  },
+  "dependencies": {
+    "vue": "^3.5.30"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.5",
+    "knip": "^5.88.1",
+    "oxfmt": "^0.41.0",
+    "typescript": "^5.9.3",
+    "vite": "^8.0.1",
+    "vue-tsc": "^3.2.6"
+  }
+}
