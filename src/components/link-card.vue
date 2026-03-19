@@ -3,8 +3,8 @@ defineProps<{
 	title: string
 	description: string
 	href: string
-	iconBgClass: string
-	iconTextClass: string
+	iconBgClass?: string
+	iconTextClass?: string
 }>()
 </script>
 
@@ -17,10 +17,10 @@ defineProps<{
 	>
 		<div class="flex w-full items-start gap-3">
 			<div
-				class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-lg font-bold"
+				class="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-lg"
 				:class="[iconBgClass, iconTextClass]"
 			>
-				G
+				<slot name="icon" />
 			</div>
 			<div class="min-w-0 flex-1">
 				<h3 class="text-sm font-semibold">{{ title }}</h3>

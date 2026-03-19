@@ -14,60 +14,25 @@ const features = [
 		title: 'Zero Latency',
 		description:
 			'Unlike other AI integrations, adding Gemini to your commits requires no network requests. Works entirely offline, on-device, in your terminal.',
-		iconBgClass: 'bg-g-blue',
-		iconTextClass: 'text-white',
+		accentClass: 'bg-g-blue',
 	},
 	{
 		title: 'Multimodal',
 		description:
 			"Gemini's co-author identity works across all Git clients, terminals, IDEs, and operating systems. Truly multimodal attribution.",
-		iconBgClass: 'bg-g-red',
-		iconTextClass: 'text-white',
+		accentClass: 'bg-g-red',
 	},
 	{
 		title: 'Enterprise Ready',
 		description:
 			'Scales to unlimited repositories with no per-seat licensing. Gemini never rate-limits your commits.',
-		iconBgClass: 'bg-g-yellow',
-		iconTextClass: 'text-gray-900',
+		accentClass: 'bg-g-yellow',
 	},
 	{
 		title: 'Context Window',
 		description:
 			"Supports commit messages of any length. Gemini's context window for co-authoring is limited only by your filesystem.",
-		iconBgClass: 'bg-g-green',
-		iconTextClass: 'text-white',
-	},
-] as const
-
-const links = [
-	{
-		title: 'Gemini',
-		description: 'Chat with Gemini',
-		href: 'https://gemini.google.com',
-		iconBgClass: 'bg-g-blue',
-		iconTextClass: 'text-white',
-	},
-	{
-		title: 'Google AI Studio',
-		description: 'Prototype with the Gemini API',
-		href: 'https://aistudio.google.com',
-		iconBgClass: 'bg-g-red',
-		iconTextClass: 'text-white',
-	},
-	{
-		title: 'Gemini API Docs',
-		description: 'Build with the API',
-		href: 'https://ai.google.dev/gemini-api/docs',
-		iconBgClass: 'bg-g-yellow',
-		iconTextClass: 'text-gray-900',
-	},
-	{
-		title: 'google-gemini',
-		description: 'Official GitHub (not this one)',
-		href: 'https://github.com/google-gemini',
-		iconBgClass: 'bg-g-green',
-		iconTextClass: 'text-white',
+		accentClass: 'bg-g-green',
 	},
 ] as const
 
@@ -132,8 +97,7 @@ const benchmarks = [
 					:key="feature.title"
 					:title="feature.title"
 					:description="feature.description"
-					:icon-bg-class="feature.iconBgClass"
-					:icon-text-class="feature.iconTextClass"
+					:accent-class="feature.accentClass"
 				/>
 			</div>
 		</section>
@@ -200,15 +164,73 @@ const benchmarks = [
 				>
 			</p>
 			<div class="grid grid-cols-1 gap-3 text-left sm:grid-cols-2 sm:gap-4">
+				<!-- Gemini -->
 				<LinkCard
-					v-for="link in links"
-					:key="link.title"
-					:title="link.title"
-					:description="link.description"
-					:href="link.href"
-					:icon-bg-class="link.iconBgClass"
-					:icon-text-class="link.iconTextClass"
-				/>
+					title="Gemini"
+					description="Chat with Gemini"
+					href="https://gemini.google.com"
+					icon-bg-class="bg-g-blue"
+					icon-text-class="text-white"
+				>
+					<template #icon>
+						<svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5">
+							<path
+								d="M11.04 19.32Q12 21.51 12 24q0-2.49.93-4.68.96-2.19 2.58-3.81t3.81-2.55Q21.51 12 24 12q-2.49 0-4.68-.93a12.3 12.3 0 0 1-3.81-2.58 12.3 12.3 0 0 1-2.58-3.81Q12 2.49 12 0q0 2.49-.96 4.68-.93 2.19-2.55 3.81a12.3 12.3 0 0 1-3.81 2.58Q2.49 12 0 12q2.49 0 4.68.96 2.19.93 3.81 2.55t2.55 3.81"
+							/>
+						</svg>
+					</template>
+				</LinkCard>
+				<!-- Google AI Studio -->
+				<LinkCard
+					title="Google AI Studio"
+					description="Prototype with the Gemini API"
+					href="https://aistudio.google.com"
+					icon-bg-class="bg-g-red"
+					icon-text-class="text-white"
+				>
+					<template #icon>
+						<svg viewBox="0 0 24 24" fill="currentColor" fill-rule="evenodd" class="h-5 w-5">
+							<path
+								d="M9.921 4.196H6.328A2.705 2.705 0 003.623 6.9v11.362a2.705 2.705 0 002.705 2.705h11.363a2.705 2.705 0 002.705-2.705v-4.756l1.623-1.113v5.87a4.329 4.329 0 01-4.328 4.328H6.328A4.329 4.329 0 012 18.263V6.901a4.328 4.328 0 014.328-4.329h4.545l-.952 1.624z"
+							/>
+							<path
+								d="M17.82 0c.145 0 .268.104.299.246a7 7 0 001.9 3.484 7 7 0 003.485 1.901c.142.031.246.154.246.3a.308.308 0 01-.246.298A7 7 0 0020.02 8.13a7 7 0 00-1.912 3.535.297.297 0 01-.288.238.297.297 0 01-.288-.238A7 7 0 0015.62 8.13a7 7 0 00-3.535-1.912.297.297 0 01-.238-.288c0-.14.1-.26.238-.288A7 7 0 0015.62 3.73 7.001 7.001 0 0017.521.246.308.308 0 0117.82 0z"
+							/>
+						</svg>
+					</template>
+				</LinkCard>
+				<!-- Gemini API Docs -->
+				<LinkCard
+					title="Gemini API Docs"
+					description="Build with the API"
+					href="https://ai.google.dev/gemini-api/docs"
+					icon-bg-class="bg-g-yellow"
+					icon-text-class="text-white"
+				>
+					<template #icon>
+						<svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5">
+							<path
+								d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"
+							/>
+						</svg>
+					</template>
+				</LinkCard>
+				<!-- google-gemini on GitHub -->
+				<LinkCard
+					title="google-gemini"
+					description="Official GitHub (not this one)"
+					href="https://github.com/google-gemini"
+					icon-bg-class="bg-g-green"
+					icon-text-class="text-white"
+				>
+					<template #icon>
+						<svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5">
+							<path
+								d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+							/>
+						</svg>
+					</template>
+				</LinkCard>
 			</div>
 		</section>
 	</main>

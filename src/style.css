@@ -76,3 +76,13 @@ a {
 .text-g-green {
 	color: var(--color-g-green);
 }
+
+.footer-link {
+	color: var(--color-g-blue) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+	.footer-link {
+		color: #4a8ae8 !important;
+	}
+}

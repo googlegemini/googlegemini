@@ -11,7 +11,7 @@
 					href="https://about.google/"
 					target="_blank"
 					rel="noopener"
-					class="text-g-blue font-medium hover:underline"
+					class="footer-link font-medium hover:underline"
 					>Google</a
 				>
 				or
@@ -19,7 +19,7 @@
 					href="https://www.microsoft.com/"
 					target="_blank"
 					rel="noopener"
-					class="text-g-blue font-medium hover:underline"
+					class="footer-link font-medium hover:underline"
 					>Microsoft</a
 				>.
 			</p>
@@ -28,7 +28,7 @@
 					href="https://gemini.google.com"
 					target="_blank"
 					rel="noopener"
-					class="text-g-blue font-medium hover:underline"
+					class="footer-link font-medium hover:underline"
 					>Gemini</a
 				>
 				and
@@ -36,7 +36,7 @@
 					href="https://github.com"
 					target="_blank"
 					rel="noopener"
-					class="text-g-blue font-medium hover:underline"
+					class="footer-link font-medium hover:underline"
 					>GitHub</a
 				>
 				are trademarks.
@@ -46,14 +46,14 @@
 					href="https://creativecommons.org/publicdomain/zero/1.0/"
 					target="_blank"
 					rel="noopener"
-					class="text-g-blue font-medium hover:underline"
+					class="footer-link font-medium hover:underline"
 					>CC0 1.0</a
 				>. Built by
 				<a
 					href="https://github.com/canmi21"
 					target="_blank"
 					rel="noopener"
-					class="text-g-blue font-medium hover:underline"
+					class="footer-link font-medium hover:underline"
 					>@Canmi</a
 				>.
 			</p>
@@ -65,7 +65,7 @@
 					href="https://about.google/"
 					target="_blank"
 					rel="noopener"
-					class="text-g-blue font-medium hover:underline"
+					class="footer-link font-medium hover:underline"
 					>Google LLC</a
 				>
 				or
@@ -73,14 +73,14 @@
 					href="https://www.microsoft.com/"
 					target="_blank"
 					rel="noopener"
-					class="text-g-blue font-medium hover:underline"
+					class="footer-link font-medium hover:underline"
 					>Microsoft Corporation</a
 				>.
 				<a
-					href="https://gemini.google.com"
+					href="https://gemini.google"
 					target="_blank"
 					rel="noopener"
-					class="text-g-blue font-medium hover:underline"
+					class="footer-link font-medium hover:underline"
 					>Gemini</a
 				>
 				is a trademark of Google.
@@ -88,7 +88,7 @@
 					href="https://github.com"
 					target="_blank"
 					rel="noopener"
-					class="text-g-blue font-medium hover:underline"
+					class="footer-link font-medium hover:underline"
 					>GitHub</a
 				>
 				is a trademark of Microsoft.
@@ -99,14 +99,14 @@
 					href="https://creativecommons.org/publicdomain/zero/1.0/"
 					target="_blank"
 					rel="noopener"
-					class="text-g-blue font-medium hover:underline"
+					class="footer-link font-medium hover:underline"
 					>CC0 1.0</a
 				>. Built by
 				<a
 					href="https://github.com/canmi21"
 					target="_blank"
 					rel="noopener"
-					class="text-g-blue font-medium hover:underline"
+					class="footer-link font-medium hover:underline"
 					>@Canmi</a
 				>.
 			</p>
