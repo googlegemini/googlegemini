@@ -6,7 +6,7 @@
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
-    "fmt": "oxfmt --write src/",
+    "fmt": "oxfmt --write .",
     "knip": "knip"
   },
   "dependencies": {
