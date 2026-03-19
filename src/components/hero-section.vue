@@ -59,13 +59,13 @@ async function copy(line: string) {
 		class="flex min-h-[calc(100svh-4px)] flex-col items-center justify-center py-10 text-center sm:py-12"
 	>
 		<h1 class="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+			Commit with
 			<span class="bg-linear-to-r from-[#4a82f6] to-[#629bf8] bg-clip-text text-transparent"
 				>Gemini</span
 			>
-			for GitHub
 		</h1>
 		<p class="text-muted mt-4 text-[15px] leading-relaxed sm:text-lg md:text-xl">
-			Bring the power of Gemini to your commit history.
+			The missing Gemini co-author for your Git history.
 		</p>
 
 		<button
