@@ -70,7 +70,7 @@ async function copy(line: string) {
 
 		<button
 			type="button"
-			class="group hover:border-g-blue mt-8 flex w-full cursor-pointer flex-col items-start gap-3 rounded-2xl border border-gray-200 bg-gray-100 px-4 py-4 text-left font-mono text-[11px] transition-colors sm:mt-10 sm:px-5 sm:py-5 sm:text-sm md:px-7 md:text-base"
+			class="group hover:border-g-blue mt-8 flex w-full cursor-pointer flex-col items-start gap-3 rounded-2xl border border-gray-200 bg-gray-100 px-4 py-4 text-left font-mono text-[11px] transition-colors sm:mt-10 sm:px-5 sm:py-5 sm:text-sm md:px-7 md:text-base dark:border-gray-700 dark:bg-white/5"
 			@click="copy(coAuthorLine)"
 		>
 			<code class="text-text w-full overflow-x-auto leading-relaxed whitespace-nowrap">

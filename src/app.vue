@@ -111,7 +111,7 @@ const benchmarks = [
 				>
 			</p>
 			<div
-				class="mt-8 overflow-x-auto rounded-2xl border border-gray-200 bg-gray-100 px-4 py-4 text-left font-mono text-[12px] md:px-7 md:py-5 md:text-base"
+				class="mt-8 overflow-x-auto rounded-2xl border border-gray-200 bg-gray-100 px-4 py-4 text-left font-mono text-[12px] md:px-7 md:py-5 md:text-base dark:border-gray-700 dark:bg-white/5"
 			>
 				<pre class="m-0"><code>git commit -m "feat: something
 
@@ -144,7 +144,7 @@ const benchmarks = [
 			</h2>
 			<div class="mx-auto mt-4 max-w-[21rem] space-y-3 sm:max-w-[30rem]">
 				<div>
-					<code class="rounded bg-gray-100 px-1.5 py-0.5 font-mono text-sm"
+					<code class="rounded bg-gray-100 px-1.5 py-0.5 font-mono text-sm dark:bg-white/10"
 						>Co-Authored-By: Claude</code
 					>
 				</div>

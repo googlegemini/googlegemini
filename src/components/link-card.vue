@@ -13,7 +13,7 @@ defineProps<{
 		:href="href"
 		target="_blank"
 		rel="noopener"
-		class="hover:border-g-blue flex flex-col items-start gap-3 rounded-2xl border border-gray-200/80 bg-white px-4 py-4 transition-colors sm:px-5"
+		class="hover:border-g-blue flex flex-col items-start gap-3 rounded-2xl border border-gray-200/80 bg-white px-4 py-4 transition-colors sm:px-5 dark:border-gray-700/80 dark:bg-white/5"
 	>
 		<div class="flex w-full items-start gap-3">
 			<div
